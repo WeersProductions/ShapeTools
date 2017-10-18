@@ -7,40 +7,32 @@ public static class BezierHelper
 {
     public static Vector2 GetBezier(float t, params Vector2[] points)
     {
-        if (points.Length == 1)
+        return GetBezier(t, 0, points.Length - 1, points);
+    }
+
+    private static Vector2 GetBezier(float t, int start, int end, params Vector2[] points)
+    {
+        if (start == end)
         {
-            return points[0];
+            return points[start];
         }
-        return (1 - t) * GetBezier(t, points.SubArray(0, points.Length - 1)) +
-               t * GetBezier(t, points.SubArray(1, points.Length - 1));
+        return (1 - t) * GetBezier(t, start, end - 1, points) +
+               t * GetBezier(t, start + 1, end, points);
     }
 
     public static Vector3 GetBezier(float t, params Vector3[] points)
     {
-        if (points.Length == 1)
+        return GetBezier(t, 0, points.Length - 1, points);
+    }
+
+    private static Vector3 GetBezier(float t, int start, int end, params Vector3[] points)
+    {
+        if (start == end)
         {
-            return points[0];
+            return points[start];
         }
-        return (1 - t) * GetBezier(t, points.SubArray(0, points.Length - 1)) +
-               t * GetBezier(t, points.SubArray(1, points.Length - 1));
-    }
-
-    public static Vector2 GetQuadraticPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2)
-    {
-        return Vector2.Lerp(GetLinearPoint(t, p0, p1), GetLinearPoint(t, p1, p2), t);
-    }
-
-    public static Vector2 GetLinearPoint(float t, Vector2 p0, Vector2 p1)
-    {
-        return Vector2.Lerp(p0, p1, t);
-    }
-
-
-    public static T[] SubArray<T>(this T[] data, int index, int length)
-    {
-        T[] result = new T[length];
-        Array.Copy(data, index, result, 0, length);
-        return result;
+        return (1 - t) * GetBezier(t, start, end - 1, points) +
+               t * GetBezier(t, start + 1, end, points);
     }
 }
 
