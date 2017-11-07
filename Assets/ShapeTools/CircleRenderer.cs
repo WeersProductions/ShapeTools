@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace WeersProductions.ArcTools
+namespace WeersProductions.ShapeTools
 {
     /// <inheritdoc />
     /// <summary>

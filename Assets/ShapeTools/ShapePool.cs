@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace WeersProductions.ArcTools
+namespace WeersProductions.ShapeTools
 {
     /// <summary>
     /// A simple class that allows to pool the different shapes.

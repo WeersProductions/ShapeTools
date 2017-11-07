@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace WeersProductions.ArcTools
+namespace WeersProductions.ShapeTools
 {
     /// <summary>
     /// Contains functions for Bezier calculations.

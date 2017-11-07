@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace WeersProductions.ArcTools
+namespace WeersProductions.ShapeTools
 {
     /// <summary>
     /// Class that contains mathematical help functions to calculate shapes.
