@@ -2,24 +2,44 @@
 
 namespace WeersProductions.ArcTools
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// Renders a simple Circle.
+    /// </summary>
     public class CircleRenderer : ShapeRenderer
     {
+        /// <summary>
+        /// Defines the radius of the circle.
+        /// </summary>
         [SerializeField] private float _radius;
 
+        /// <summary>
+        /// Defines the origin of the circle.
+        /// </summary>
         [SerializeField] private Vector3 _origin;
 
+        /// <summary>
+        /// Defines the radius of the circle.
+        /// </summary>
         public float Radius
         {
             get { return _radius; }
             set { _radius = value; }
         }
 
+        /// <summary>
+        /// Defines the origin of the circle.
+        /// </summary>
         public Vector3 Origin
         {
             get { return _origin; }
             set { _origin = value; }
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Will render the circle.
+        /// </summary>
         public override void Render()
         {
             Vector3[] points = new Vector3[Resolution];
