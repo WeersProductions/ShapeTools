@@ -2,6 +2,7 @@
 
 namespace WeersProductions.ArcTools
 {
+    /// <inheritdoc />
     /// <summary>
     /// A renderer for bezier curves.
     /// </summary>
@@ -64,6 +65,12 @@ namespace WeersProductions.ArcTools
             set { _inwards = value; }
         }
 
+        //private void Update()
+        //{
+        //    Render();
+        //}
+
+        /// <inheritdoc />
         /// <summary>
         /// Populating the LineRenderer with the appropriate settings.
         /// </summary>

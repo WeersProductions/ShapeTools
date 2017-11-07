@@ -36,6 +36,11 @@ namespace WeersProductions.ArcTools
             set { _origin = value; }
         }
 
+        //private void Update()
+        //{
+        //    Render();
+        //}
+
         /// <inheritdoc />
         /// <summary>
         /// Will render the circle.
